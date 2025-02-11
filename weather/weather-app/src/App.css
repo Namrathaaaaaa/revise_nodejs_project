@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Caveat:wght@600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fff0f5, #ffdde1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Weather Card */
+.weather-card {
+    background: linear-gradient(to bottom, #ff9aa2, #ffb6c1, #ffdde1);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0px 12px 25px rgba(255, 145, 180, 0.4);
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(15px);
+    color: white;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+/* Cute Heart Animation */
+.weather-card::before {
+    content: "💖";
+    font-size: 30px;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    animation: float 2s infinite alternate;
+}
+
+/* Floating Heart Animation */
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* Heading */
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive;
+    letter-spacing: 1px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Input Field */
+input {
+    padding: 12px;
+    border: 2px solid #ff99ac;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+    transition: 0.3s;
+    background: white;
+    color: #333;
+}
+
+input:focus {
+    border-color: #ff4d6d;
+    background: #fff5f7;
+    box-shadow: 0px 0px 10px rgba(255, 77, 109, 0.4);
+}
+
+/* Button */
+button {
+    background: white;
+    color: #ff4d6d;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 5px 10px rgba(255, 77, 109, 0.2);
+}
+
+button:hover {
+    background: #ffe0e6;
+    transform: scale(1.1);
+}
+
+/* Weather Info */
+.weather-info {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(255, 145, 180, 0.3);
+}
+
+.weather-info h3 {
+    margin-bottom: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+}
+
+.weather-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+/* Error Message */
+.error {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+}
