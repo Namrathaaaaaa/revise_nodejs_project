@@ -9,6 +9,10 @@ const PORT = 3000
 app.use(cors())
 app.use(express.json())
 
+app.get('/',(req,res)=>{
+    res.send("hi")
+})
+
 
 app.post('/weather',async(req,res)=>{
     const city = req.body.city
